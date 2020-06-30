@@ -13,7 +13,7 @@ module.exports = app => {
 
     let membership = context.github.orgs.checkMembership({org: 'camunda', username: context.payload.sender.login}).then(res => {
       if(res.status === 204) {
-        // const issueComment = context.issue({ body: 'Hey there colleague, thanks for creating a PR!' });
+        const issueComment = context.issue({ body: 'Hey there colleague, thanks for creating a PR!' });
         return context.github.issues.createComment(issueComment)
       }
     }).catch(err => {
@@ -21,7 +21,7 @@ module.exports = app => {
       return context.github.issues.createComment(issueComment)
     });
 
-    context.github.issues.addLabels(context.issue({ issue_number: issueContext.number, labels: 'needs review' }));
+    context.github.issues.addLabels(context.issue({ issue_number: issueContext.number, labels: ['needs review'] }));
 
   });
 
