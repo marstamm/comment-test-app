@@ -1,6 +1,6 @@
 on: 
   pull_request:
-    types: [opened]
+    types: [assigned, opened, synchronize, reopened]
   issues:
     types: [opened]
 
