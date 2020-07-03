@@ -11,6 +11,6 @@ jobs:
       # To use this repository's private action,
       # you must check out the repository
       - name: Comment
-        uses: marstamm/comment-test-app@v1
+        uses: marstamm/comment-and-label-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
