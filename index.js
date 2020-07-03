@@ -3,7 +3,7 @@
  * @param {import('probot').Application} app
  */
 module.exports = app => {
-  app.on(['pull_request.opened', 'issues.opened'], async context => {
+  app.on(['pull_request.opened'], async context => {
     const issueContext = context.issue();
 
     let membership = context.github.orgs.checkMembership({org: 'camunda', username: context.payload.sender.login}).then(res => {
