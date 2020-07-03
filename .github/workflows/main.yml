@@ -10,10 +10,7 @@ jobs:
     steps:
       # To use this repository's private action,
       # you must check out the repository
-      - name: Checkout
+      - name: Comment
         uses: marstamm/comment-test-app@v1
-      - name: My Probot action
-        uses: ./ # Uses an action in the root directory
-        id: hello
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
