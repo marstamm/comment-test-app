@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Label Pull requests
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Comment
         uses: marstamm/comment-and-label-action@v1
         env:
