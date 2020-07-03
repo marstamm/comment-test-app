@@ -1,0 +1,5 @@
+name: 'Camunda PR Comment'
+description: 'Adds label and comment to community PRs.'
+runs:
+  using: 'node12'
+  main: 'action.js'
